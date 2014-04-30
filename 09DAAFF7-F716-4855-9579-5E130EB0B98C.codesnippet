@@ -3,22 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>CSLog</string>
+	<string>csmainthread</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>NSLog(@"&lt;#Log message#&gt;");</string>
+	<string>dispatch_async(dispatch_get_main_queue(), ^{
+        &lt;#Block in main thread#&gt;
+    });</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>AA5FF342-7AFA-4BCF-971F-B28F2A44AB56</string>
+	<string>09DAAFF7-F716-4855-9579-5E130EB0B98C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>NSLog</string>
+	<string>Main Thread Block</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
