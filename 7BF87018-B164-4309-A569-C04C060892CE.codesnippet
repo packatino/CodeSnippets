@@ -3,24 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>csbackgroundthread</string>
+	<string>cssingleton</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-    &lt;#Background Block#&gt;
-});</string>
+	<string>+ (&lt;#Class name#&gt; *)sharedManager
+{
+    static &lt;#Class name#&gt; *sharedManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&amp;onceToken, ^{
+        sharedManager = [[self alloc] init];
+    });
+    return sharedManager;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>0EDC09B7-BAAE-4A0E-8550-218CFCCBC0E1</string>
+	<string>7BF87018-B164-4309-A569-C04C060892CE</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>The sharedManager class method for singletons.</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Background Thread Block</string>
+	<string>Singleton</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
